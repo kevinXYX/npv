@@ -1,0 +1,99 @@
+
+<div class="container-fluid main-container">
+    <div class="row">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+              <div class="form-inline">
+                  <div class="form-group">
+                      <h4><b>Settings</b></h4>
+                  </div>
+                  <div class="form-group pull-right">
+                      <button type="button" class="btn btn-primary save-btn">Save</button>
+                  </div>
+                  <div class="form-group pull-right">
+                      <button type="button" class="btn btn-default reset-btn">Reset</button>
+                  </div>
+              </div>
+            </div>
+              <div class="panel-body">
+                  <div class="col-md-7">
+                      <div class="form-horizontal">
+                          <div class="form-group">
+                            <label for="lifeOfProject" class="col-sm-3 control-label">Life of Project:</label>
+                            <div class="col-sm-5">
+                              <input type="number" [(ngModel)]="lifeOfProjectValue" (change)="addCashFlow()" class="form-control" id="lifeOfProject" placeholder="number of years">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                              <label for="initialCost" class="col-sm-3 control-label">Initial Cost:</label>
+                              <div class="col-sm-5">
+                                <input type="number" class="form-control" id="initialCost" placeholder="must be a negative value">
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-3 col-md-pull-1">
+                      <div class="form">
+                          <div class="form-group">
+                            <label for="lowerBoundDiscountRate">Lower Bound Discount Rate:</label>
+                            <div class="input-group">
+                              <input type="number" class="form-control" id="lowerBoundDiscountRate">
+                              <div class="input-group-addon">%</div>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label for="upperBoundDiscountRate">Upper Bound Discount Rate:</label>
+                            <div class="input-group">
+                              <input type="number" class="form-control" id="upperBoundDiscountRate">
+                              <div class="input-group-addon">%</div>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label for="discountRateIncrement">Discount Rate Increment:</label>
+                            <div class="input-group">
+                              <input type="number" class="form-control" id="discountRateIncrement">
+                              <div class="input-group-addon">%</div>
+                            </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+        </div>
+    </div>
+    <div class="row">
+      <div class="panel panel-primary">
+          <div class="panel-heading"><h4><b>Cash Flows</b></h4></div>
+            <div class="panel-body">
+                <div class="col-md-12">
+                    <div class="form-horizontal">
+                        <div *ngFor="let cashFlow of cashFlows" class="form-group">
+                          <label for="cashFlow-{{cashFlow.id}}" class="col-sm-3 control-label">Cash flow {{cashFlow.id}}:</label>
+                          <div class="col-sm-4">
+                            <div class="input-group">
+                                <input type="number" class="form-control" id="cashFlow-{{cashFlow.id}}">
+                                <div class="input-group-addon">per year</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                            <button type="button" class="btn btn-success calculate-btn pull-right">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="panel panel-primary">
+        <div class="panel-heading"><h4><b>Result</b></h4></div>
+          <div class="panel-body">
+            <div class="col-md-5">
+              <h4>Net Present Value: $25,470.01</h4>
+            </div>
+            <div class="col-md-4">
+              
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,15 @@
+/.vs/VisualRiskNPV/v15
+/.vs/config/applicationhost.config
+/NPV.DatabaseCore/bin
+/NPV.DatabaseCore/obj
+/NPV.Models/bin
+/NPV.Services/bin
+/NPV.Services/obj
+/NPV.Tests/bin
+/NPV.Tests/obj
+/NPVApi/.vs/NPVApi/v15
+/NPVApi/NPVApi/bin
+/NPVApi/NPVApi/obj
+/VisualRiskNPV/bin
+/VisualRiskNPV/obj
+
