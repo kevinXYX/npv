@@ -39,3 +39,7 @@ To make sure that the UI will connect to NPV.Api, go to NPV.Web\ClientApp\src\en
 ## Tests
 
 All tests should go to NPV.Tests, When adding new test that requires service injectables use the ServiceTestsLocator class, (see CalculationTests and PreviousResultsTests for implementation)
+
+## Author
+
+Kevin Jun M. Rodriguez
