@@ -6,3 +6,4 @@ C:\Users\Kevin\source\repos\VisualRiskNPV\NPV.Models\obj\Debug\netcoreapp2.1\NPV
 C:\Users\Kevin\source\repos\VisualRiskNPV\NPV.Models\obj\Debug\netcoreapp2.1\NPV.Models.AssemblyInfo.cs
 C:\Users\Kevin\source\repos\VisualRiskNPV\NPV.Models\obj\Debug\netcoreapp2.1\NPV.Models.dll
 C:\Users\Kevin\source\repos\VisualRiskNPV\NPV.Models\obj\Debug\netcoreapp2.1\NPV.Models.pdb
+C:\Users\Kevin\source\repos\VisualRiskNPV\NPV.Models\obj\Debug\netcoreapp2.1\NPV.Models.csprojAssemblyReference.cache

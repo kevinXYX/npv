@@ -1,0 +1,32 @@
+<div class="container-fluid previous-results-container">
+  <div class="row">
+    <div class="col-md-12">
+        <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Life of Project</th>
+                <th>Initial Cost</th>
+                <th>Lower Bound Discount Rate %</th>
+                <th>Upper Bound Discount Rate %</th>
+                <th>Discount Rate Increment %</th>
+                <th>Net Present Value</th>
+                <th>PV of Cash flows</th>
+                <th>Created Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let previousResult of previousResults; let i = index">
+                <th>{{previousResult.LifeOfProject}}</th>
+                <td>{{previousResult.InitialCost}}</td>
+                <td>{{previousResult.LowerBoundDiscountRate}}</td>
+                <td>{{previousResult.UpperBoundDiscountRate}}</td>
+                <td>{{previousResult.DiscountRateIncrement}}</td>
+                <td>{{previousResult.NetPresentValue}}</td>
+                <td>{{previousResult.PresentValueOfCashFlows}}</td>
+                <td>{{previousResult.CreatedDate | date:'medium'}}</td>
+              </tr>
+            </tbody>
+        </table>
+    </div>
+  </div>
+</div>

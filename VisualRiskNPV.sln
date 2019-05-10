@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.329
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NPV.Api", "NPVApi\NPVApi\NPV.Api.csproj", "{858ADC56-F453-4718-8C36-329520C898B7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NPV.Api", "NPV.Api\NPV.Api.csproj", "{858ADC56-F453-4718-8C36-329520C898B7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NPV.Web", "NPVWeb\NPV.Web.csproj", "{8A579F74-F894-4597-AC9B-E8E7EC5581EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NPV.Web", "NPV.Web\NPV.Web.csproj", "{8A579F74-F894-4597-AC9B-E8E7EC5581EA}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NPV.DatabaseCore", "NPV.DatabaseCore\NPV.DatabaseCore.csproj", "{E1EDFA90-7CF8-47C5-AE19-66CD90C43F53}"
 EndProject

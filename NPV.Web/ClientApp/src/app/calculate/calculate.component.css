@@ -1,0 +1,37 @@
+.main-container {
+    margin-top: 57px;
+}
+.panel-primary {
+    margin-top: -1px;
+}
+.is-invalid {
+    border-color: red;
+}
+.cashflow-error-message { 
+    font-size: small;
+    color:red;
+}
+.result-container {
+    text-align: center;
+    line-height: 20px;
+}
+.net-present-value {
+    color: #018aff;
+    font-weight: bold;
+    font-size: 22px;
+}
+.present-value-of-cashflows {
+    color: #018aff;
+    font-weight: bold;
+    font-size: 20px;
+}
+.remove-btn {
+    background-color: #a81d1a;
+    border: none;
+    color: white;
+    padding: 5px 7px;
+    text-align: center;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}

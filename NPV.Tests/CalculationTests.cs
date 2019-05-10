@@ -1,11 +1,8 @@
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using NPV.DatabaseCore;
 using NPV.Models.ViewModels;
 using NPV.Services.CalculationService;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace NPV.Tests
 {
@@ -16,13 +13,9 @@ namespace NPV.Tests
 
         public CalculationTests()
         {
-            var servicesCollection = new ServiceCollection();
+            var serviceTestsLocator = new ServiceTestsLocator();
 
-            servicesCollection.AddTransient<ICalculationService, CalculationService>();
-
-            var serviceProvider = servicesCollection.BuildServiceProvider();
-
-            calculationService = serviceProvider.GetService<ICalculationService>();
+            calculationService = serviceTestsLocator.GetService<ICalculationService>(typeof(ICalculationService), typeof(CalculationService));
         }
 
         [TestMethod]
@@ -75,7 +68,7 @@ namespace NPV.Tests
         }
 
         [TestMethod]
-        public void CalculateNPresentValue()
+        public void CalculatePresentValueOfCashFlows()
         {
             //Arrange
             var calculationModel = new CalculationModel();
@@ -91,52 +84,52 @@ namespace NPV.Tests
             cashFlows.Add(new CashFlow
             {
                 Year = 1,
-                Value = 10,
+                Value = 4543,
             });
             cashFlows.Add(new CashFlow
             {
                 Year = 2,
-                Value = 10,
+                Value = 2342,
             });
             cashFlows.Add(new CashFlow
             {
                 Year = 3,
-                Value = 10,
+                Value = 1234,
             });
             cashFlows.Add(new CashFlow
             {
                 Year = 4,
-                Value = 10,
+                Value = 3443,
             });
             cashFlows.Add(new CashFlow
             {
                 Year = 5,
-                Value = 10,
+                Value = 2312,
             });
             cashFlows.Add(new CashFlow
             {
                 Year = 6,
-                Value = 10,
+                Value = 1234,
             });
             cashFlows.Add(new CashFlow
             {
                 Year = 7,
-                Value = 10,
+                Value = 4322,
             });
             cashFlows.Add(new CashFlow
             {
                 Year = 8,
-                Value = 10,
+                Value = 2344,
             });
             cashFlows.Add(new CashFlow
             {
                 Year = 9,
-                Value = 10,
+                Value = 4232,
             });
             cashFlows.Add(new CashFlow
             {
                 Year = 10,
-                Value = 10,
+                Value = 2323,
             });
 
             calculationModel.CashFlows = cashFlows;
