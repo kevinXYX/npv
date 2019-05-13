@@ -18,7 +18,8 @@ export class CalculateComponent implements OnInit {
   cashFlowMaxValue : number  = 50; //added a max cashflow restriction here so that user won't accidentally add like 1000 or 10000 cashflows that would cause UI to hang
   calculationModel = new CalculationModel();
   netPresentValue : number = null;
-  presentValueOfCashFlows : number = null;
+  presentValueOfCashFlows: number = null;
+  isSaveSuccess: boolean = false;
 
   @ViewChild('npvForm') npvForm: NgForm;
 
@@ -94,6 +95,7 @@ export class CalculateComponent implements OnInit {
     if (this.npvForm.valid) { 
       this.previousResultsService.saveResults(this.calculationModel).subscribe(response => {
         if (response.Success) {
+          this.isSaveSuccess = true;
           this.resetFields();
         }
       });

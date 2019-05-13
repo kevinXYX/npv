@@ -29,7 +29,7 @@ namespace NPV.Api.Controllers
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            return Ok(await _npvContext.PreviousResults.ToListAsync());
+            return Ok(await _npvContext.PreviousResults.OrderByDescending(x => x.Id).ToListAsync());
         }
 
         [HttpPost("save")]
