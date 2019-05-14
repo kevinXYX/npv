@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Cors;
@@ -32,7 +33,7 @@ namespace NPV.Api.Controllers
 
             var netPresentValue = _calculationService.CalculateNetPresentValue(calculationModel);
 
-            return Ok(new { NetPresentValue = netPresentValue.ToString("C2"), PresentValueOfCashFlows = (netPresentValue + Convert.ToDouble(calculationModel.InitialCost)).ToString("C2") });
+           return Ok(new { NetPresentValue = netPresentValue, PresentValueOfCashFlows = (netPresentValue + Convert.ToDouble(Math.Abs(calculationModel.InitialCost))) });
         }
     }
 }

@@ -25,37 +25,37 @@ namespace NPV.Tests
             var calculationModel = new CalculationModel();
 
             calculationModel.LifeOfProject = 5;
-            calculationModel.DiscountRateIncrement = 0.25;
-            calculationModel.LowerBoundDiscountRate = 1;
-            calculationModel.UpperBoundDiscountRate = 5;
-            calculationModel.InitialCost = 10000;
+            calculationModel.DiscountRateIncrement = 0.01;
+            calculationModel.LowerBoundDiscountRate = 3.65;
+            calculationModel.UpperBoundDiscountRate = 3.70;
+            calculationModel.InitialCost = -100000;
 
             var cashFlows = new List<CashFlow>();
 
             cashFlows.Add(new CashFlow
             {
                 Year = 1,
-                Value = 1245,
+                Value = 30000,
             });
             cashFlows.Add(new CashFlow
             {
                 Year = 2,
-                Value = 2846,
+                Value = 30000,
             });
             cashFlows.Add(new CashFlow
             {
                 Year = 3,
-                Value = 4256,
+                Value = 30000,
             });
             cashFlows.Add(new CashFlow
             {
                 Year = 4,
-                Value = 2123,
+                Value = 30000,
             });
             cashFlows.Add(new CashFlow
             {
                 Year = 5,
-                Value = 3893,
+                Value = 30000,
             });
 
             calculationModel.CashFlows = cashFlows;
@@ -73,69 +73,44 @@ namespace NPV.Tests
             //Arrange
             var calculationModel = new CalculationModel();
 
-            calculationModel.LifeOfProject = 10;
-            calculationModel.DiscountRateIncrement = 0.25;
-            calculationModel.LowerBoundDiscountRate = 1;
-            calculationModel.UpperBoundDiscountRate = 5;
-            calculationModel.InitialCost = 10000;
+            calculationModel.LifeOfProject = 5;
+            calculationModel.DiscountRateIncrement = 0.01;
+            calculationModel.LowerBoundDiscountRate = 3.65;
+            calculationModel.UpperBoundDiscountRate = 3.70;
+            calculationModel.InitialCost = -100000;
 
             var cashFlows = new List<CashFlow>();
 
             cashFlows.Add(new CashFlow
             {
                 Year = 1,
-                Value = 4543,
+                Value = 5000,
             });
             cashFlows.Add(new CashFlow
             {
                 Year = 2,
-                Value = 2342,
+                Value = 5000,
             });
             cashFlows.Add(new CashFlow
             {
                 Year = 3,
-                Value = 1234,
+                Value = 5000,
             });
             cashFlows.Add(new CashFlow
             {
                 Year = 4,
-                Value = 3443,
+                Value = 5000,
             });
             cashFlows.Add(new CashFlow
             {
                 Year = 5,
-                Value = 2312,
-            });
-            cashFlows.Add(new CashFlow
-            {
-                Year = 6,
-                Value = 1234,
-            });
-            cashFlows.Add(new CashFlow
-            {
-                Year = 7,
-                Value = 4322,
-            });
-            cashFlows.Add(new CashFlow
-            {
-                Year = 8,
-                Value = 2344,
-            });
-            cashFlows.Add(new CashFlow
-            {
-                Year = 9,
-                Value = 4232,
-            });
-            cashFlows.Add(new CashFlow
-            {
-                Year = 10,
-                Value = 2323,
+                Value = 5000,
             });
 
             calculationModel.CashFlows = cashFlows;
 
             //Act
-            var presentValueOfCashFlows = calculationService.CalculateNetPresentValue(calculationModel) + Convert.ToDouble(calculationModel.InitialCost);
+            var presentValueOfCashFlows = calculationService.CalculateNetPresentValue(calculationModel) + Convert.ToDouble(Math.Abs(calculationModel.InitialCost));
 
             //Assert
             Assert.IsTrue(presentValueOfCashFlows > 0);

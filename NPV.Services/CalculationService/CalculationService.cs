@@ -28,7 +28,7 @@ namespace NPV.Services.CalculationService
                     break;
             }
 
-            var netPresentValueResult = Math.Round(netPresentValue - Convert.ToDouble(calculationModel.InitialCost), 2);
+            var netPresentValueResult = Math.Round(netPresentValue - Convert.ToDouble(Math.Abs(calculationModel.InitialCost)), 2);
 
             return netPresentValueResult;
         }

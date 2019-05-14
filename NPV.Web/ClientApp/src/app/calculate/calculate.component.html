@@ -107,11 +107,11 @@
       <div class="panel-heading"><h4><b>Result</b></h4></div>
       <div class="panel-body result-container">
         <div>
-          <span class="net-present-value">{{netPresentValue}}</span>
+          <span class="net-present-value">{{netPresentValue | currency:'USD':true}}</span>
           <h4>Net Present Value</h4>
         </div>
         <div>
-          <span class="present-value-of-cashflows">{{presentValueOfCashFlows}}</span>
+          <span class="present-value-of-cashflows">{{presentValueOfCashFlows | currency:'USD':true}}</span>
           <h4>Present Value of Cash Flows</h4>
         </div>
       </div>
