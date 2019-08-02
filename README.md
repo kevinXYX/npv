@@ -1,7 +1,5 @@
 # Net Present Value Calculator App
 
-This app is built for Visual Risk Technical coding exercise.
-
 ## Prerequisites
 
 Visual Studio 2017
